@@ -4,6 +4,8 @@
   %p
     = p.comments.count
     = p.comments.count > 1 ? "Comments" : "Comment"
+  %p
+    = pluralize(p.get_likes.size, "Like")
 
 
 = link_to "Add New Inspiration", new_post_path
