@@ -1,5 +1,9 @@
 - @posts.each do |p|
   = link_to (image_tag p.image.url(:small)), p
   %h2= link_to p.title, p
+  %p
+    = p.comments.count
+    = p.comments.count > 1 ? "Comments" : "Comment"
+
 
 = link_to "Add New Inspiration", new_post_path
