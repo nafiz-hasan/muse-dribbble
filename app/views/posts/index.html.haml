@@ -1,2 +1,4 @@
-%h1= "Posts#index"
-%p= "Hello there"
+- @posts.each do |p|
+  %h2= link_to p.title, p
+
+= link_to "Add New Inspiration", new_post_path
